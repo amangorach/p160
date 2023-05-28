@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    <title>VR-Home</title>
+    <script src="./js/sketch.js"></script>
+</head>
+
+<body>
+    <a-scene id="scene">
+        <a-sky id="background" radius="5000" src="./assets/1.jpg"></a-sky>
+
+        <!-- Camera -->
+        <a-camera id="cam" wasd-controls="enabled:false;">
+            <!-- Cursor -->
+            <a-entity id="camera-cursor" position="0 0 -1"
+                geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: #fff; shader: flat">
+            </a-entity>
+
+            <!-- App Title -->
+            <a-entity id="app-title" position="0 0.73 -1"
+                text="font: exo2bold; align: center; width: 2; color: #000; value: It's time to travel virtually!">
+                <a-entity id="app-subtitle" position="0 -0.1 0"
+                    text="font: dejavu; align: center; width: 1; color: #0F184E; value: Travel Around The World"></a-entity>
+            </a-entity>
+        </a-camera>
+    </a-scene>
+</body>
+
+</html>
